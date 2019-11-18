@@ -29,7 +29,7 @@ pipeline {
           dir ("site") {
               sh ("htmlproofer public --internal-domains ${env.JOB_NAME} --external_only --only-4xx")
           }
-        }i
+        }
       }
     }
     stage('Docker Build & Push Image') {
